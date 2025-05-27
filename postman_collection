@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "86545f81-f281-42ea-b78c-6635a95cca4c",
+		"name": "Scheduled Lab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27099370",
+		"_collection_link": "https://warped-satellite-158160.postman.co/workspace/Team-Workspace~19b784ec-8042-4ab2-84ab-c11cccf2ac94/collection/27099370-86545f81-f281-42ea-b78c-6635a95cca4c?action=share&source=collection_link&creator=27099370"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Cadastrar novo usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Alexsander Kafka\",\r\n    \"email\": \"alex.teste@gmail.com\",\r\n    \"password\": \"21345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baselab}}/api/user/"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar usuário pelo seu id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baselab}}/api/user/2/"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar dados de usuário pelo id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Alexsander Kafka Kafka\",\r\n    \"email\": \"alex.teste@gmail.com\",\r\n    \"password\": \"21345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baselab}}/api/user/1/"
+					},
+					"response": []
+				},
+				{
+					"name": "Remover usuário pelo id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{baselab}}/api/user/1/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Scheduled",
+			"item": [
+				{
+					"name": "Criar nova reserva",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2025-05-30\",\r\n    \"start_time\": \"15:00\",\r\n    \"end_time\": \"15:30\",\r\n    \"user\": 1,\r\n    \"teacher\": 1,\r\n    \"lab\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baselab}}/api/scheduled/"
+					},
+					"response": []
+				},
+				{
+					"name": "Detalhar reserva pelo id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baselab}}/api/scheduled/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lab",
+			"item": [
+				{
+					"name": "Listar reservas por laboratório pelo id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baselab}}/api/lab/{id}/scheduled"
+					},
+					"response": []
+				},
+				{
+					"name": "Adiciona um novo lab",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"LAB-01\",\r\n    \"place\": \"Sala 02\",\r\n    \"count\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baselab}}/api/lab/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teacher",
+			"item": [
+				{
+					"name": "Listar reservas por professor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baselab}}/api/teacher/{id}/scheduled"
+					},
+					"response": []
+				},
+				{
+					"name": "Cria um novo professor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Erivelto Martins\",\r\n    \"registration\": \"python02\",\r\n    \"area\": \"Django\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baselab}}/api/teacher/"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
