@@ -4,9 +4,6 @@
 # Sobre o projeto
 Criado uma api rest com objetivo de realizar um CRUD
 
-## UML
-![der]
-
 # Tecnologias utilizadas
 ## Back end
 - Python
