@@ -46,4 +46,6 @@ python manage.py migrate
 
 # executar o projeto
 python manage.py runserver
+
+# caso queira testar no postman, importe o arquivo postman_collection.json
 ```
